@@ -1,3 +1,7 @@
+-- this is still readable so yk nothing is going on 🙏 also to constant dump just do table.foreach(H, print)
+-- feedback is only obfuscated cuz idiots like to spam webhooks for no reason
+-- will go back to open source friday this week
+
 game.StarterGui:SetCore("SendNotification", {
  Title = "ps",Text="ps: Risky haul is updating alot and the script might become broken, if it does pls use the feedback section and attach a video",
  Duration = 13
