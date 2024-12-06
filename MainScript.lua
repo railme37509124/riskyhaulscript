@@ -1322,8 +1322,15 @@ Stuff:Slider({Name = "Win Speed", Callback = function(v)
 	winspeed = v
 end, min = 100, max = 800})
 Stuff:Button({Name = "Goto best sell point", Callback = function()
+	-- "its kinda bad, the auto farm doesnt work, and speed and things make me get flinged."
+	if not game:GetService("Players").LocalPlayer.Character.Humanoid.SeatPart then
+		return game.StarterGui:SetCore("SendNotification", {
+			 Title = "get in car",Text="get in a car to use this",
+			 Duration = 4
+		});
+	end
 	game:GetService("Players").LocalPlayer.Character.Humanoid.SeatPart.CFrame = CFrame.new(57.267025, 44.5856285, -171.732178, -0.999935448, -1.00159582e-07, -0.0113605559, -1.01334564e-07, 1, 1.02850514e-07, 0.0113605559, 1.03995092e-07, -0.999935448)
-    tweencar(100 / (winspeed / 100), cargosellpoint)
+	tweencar(100 / (winspeed / 100), cargosellpoint)
 end}) -- go win
 Stuff:Toggle({Name = "Fix \"goto sell point\" if it glitches out", Callback = function(state)
 	skibidi1 = state
