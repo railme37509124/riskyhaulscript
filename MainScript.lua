@@ -1455,7 +1455,8 @@ end)
 
 -- // loops end
 
-yznotify("Made by apnff0x on discord!")
+yznotify("https://discord.gg/zNzJVgFGae")
+yznotify("feedback has broken and im not fixing that shit so for now use the discord server or dm me")
 
 -- This part is specifically obfuscated because i dont want my webhook getting spammed, sorry! (its the feedback section)
 _G.YZSETTINGS = Settings
