@@ -1455,10 +1455,4 @@ end)
 
 -- // loops end
 
-yznotify("https://discord.gg/zNzJVgFGae")
-yznotify("feedback has been broken and im not fixing that shit for now just join the discord or dm me")
-
--- This part is specifically obfuscated because i dont want my webhook getting spammed, sorry! (its the feedback section)
-_G.YZSETTINGS = Settings
-_G.YZNOTIFY = yznotify
-loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/feedbackmenu", true))()
+--yznotify("https://discord.gg/zNzJVgFGae")
