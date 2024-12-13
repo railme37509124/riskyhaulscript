@@ -1,11 +1,10 @@
--- feedback is only obfuscated cuz idiots like to spam webhooks for no reason
--- we went back to open source
--- idk if this works, i made changes but never updated or tested them
+-- source code fixed ok 👍
 
 game.StarterGui:SetCore("SendNotification", {
  Title = "ps",Text="ps: Risky haul is updating alot and the script might become broken, if it does pls use the feedback section and attach a video",
  Duration = 13
 });
+
 local rs = game:GetService("RunService")
 local uis = game:GetService("UserInputService")
 local http = game:GetService("HttpService")
@@ -19,9 +18,7 @@ local function yznotify(text)
 	if studio then return end
 	starter:SetCore("SendNotification", {Text = text, Title = "YZenium", Duration = 5})
 end
-
 yznotify("Loading Library")
--- UI
 local gdata = {}
 local sdata = {
 	tc = 0;
@@ -1250,7 +1247,7 @@ Stuff:Divider("General")
 
 local FuelValueChanged = nil
 local skibidi1 = false
-local cargosellpoint = loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/somestuff/cargosellpoint"))()
+local cargosellpoint = loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/riskyhaulscript/refs/heads/main/somestuff/cargosellpoint"))()
 
 local function tweenroot(time,pos)
     game:GetService("TweenService"):Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear), {CFrame = pos}):Play()
@@ -1325,14 +1322,21 @@ Stuff:Slider({Name = "Win Speed", Callback = function(v)
 	winspeed = v
 end, min = 100, max = 800})
 Stuff:Button({Name = "Goto best sell point", Callback = function()
+	-- "its kinda bad, the auto farm doesnt work, and speed and things make me get flinged."
+	if not game:GetService("Players").LocalPlayer.Character.Humanoid.SeatPart then
+		return game.StarterGui:SetCore("SendNotification", {
+			 Title = "get in car",Text="get in a car to use this",
+			 Duration = 4
+		});
+	end
 	game:GetService("Players").LocalPlayer.Character.Humanoid.SeatPart.CFrame = CFrame.new(57.267025, 44.5856285, -171.732178, -0.999935448, -1.00159582e-07, -0.0113605559, -1.01334564e-07, 1, 1.02850514e-07, 0.0113605559, 1.03995092e-07, -0.999935448)
-    tweencar(100 / (winspeed / 100), cargosellpoint)
+	tweencar(100 / (winspeed / 100), cargosellpoint)
 end}) -- go win
 Stuff:Toggle({Name = "Fix \"goto sell point\" if it glitches out", Callback = function(state)
 	skibidi1 = state
 end})
 Stuff:Divider("Discord")
-Stuff:Button({Name = "Copy developer UserID (discord)", Callback = function() setclipboard("1277385677603999778") end})
+Stuff:Button({Name = "Copy developer UserID (discord)", Callback = function() setclipboard("1215375161121833063") end})
 Stuff:Button({Name = "Copy official risky haul discord", Callback = function() setclipboard("https://discord.gg/risky-haul-1264916236236619857") end})
 
 local iwannabuythis = nil
@@ -1452,12 +1456,9 @@ end)
 -- // loops end
 
 yznotify("https://discord.gg/zNzJVgFGae")
-wait(5)
-yznotify("feedback has been broken and i am not fixing that shit for now just join the discord or dm me")
+yznotify("feedback has been broken and im not fixing that shit for now just join the discord or dm me")
 
-return
---[[
 -- This part is specifically obfuscated because i dont want my webhook getting spammed, sorry! (its the feedback section)
 _G.YZSETTINGS = Settings
 _G.YZNOTIFY = yznotify
-loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/feedbackmenu", true))()]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/feedbackmenu", true))()
