@@ -50,7 +50,7 @@ function gdata:LoadPresetTheme(name)
 		librsettings.ThemeColor = theme.ThemeColor
 		librsettings.Theme2 = theme.Theme2
 	else
-		warn("[YZenium] Invalid theme! Themes: Water, Blood (non case sensitive)")
+		warn("[YZenium] Invalid theme! Themes: Water, Blood, Grape (non case sensitive)")
 	end
 end
 if isfile and readfile and writefile then
@@ -1455,10 +1455,7 @@ end)
 
 -- // loops end
 
-yznotify("https://discord.gg/zNzJVgFGae")
-yznotify("feedback has broken and im not fixing that shit so for now use the discord server or dm me")
-
 -- This part is specifically obfuscated because i dont want my webhook getting spammed, sorry! (its the feedback section)
 _G.YZSETTINGS = Settings
 _G.YZNOTIFY = yznotify
-loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/feedbackmenu", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/riskyhaulscript/refs/heads/main/feedbackmenu", true))()
