@@ -138,16 +138,17 @@ function gdata:Window(options)
 			ProfilePicture.Image = (getcustomasset and getcustomasset("profilepictures/1.png") or "https://www.roblox.com/headshot-thumbnail/image?userId=".. lp.UserId .."&width=420&height=420&format=png")
 		else
 			local newtag = tostring(math.random(0, 9)..math.random(0,9)..math.random(0,9)..math.random(0,9))
+			local name = game.Players.LocalPlayer.Name
 			local enc = {
-				User = "YZenium",
+				User = name:sub(1, 7) .. (#name >= 8 and "-" or ""),
 				Tag = newtag
 			}
-			UserName.Text = "YZenium<font color=\"rgb(177,177,177)\">#"..newtag.."</font>"
+			UserName.Text = enc.User.."<font color=\"rgb(177,177,177)\">#"..newtag.."</font>"
 			writefile("yzuserdata.json", http:JSONEncode(enc))
 		end
 		if not isfolder("profilepictures") then
 			makefolder("profilepictures")
-			writefile("profilepictures/1.png", game:HttpGet("https://raw.githubusercontent.com/railme37509124/YZeniumLibrary/main/profilepictures/1.png"))
+			writefile("profilepictures/1.png", game:HttpGet("https://raw.githubusercontent.com/railme37509124/YZeniumLibrary/main/profilepictures/3.png"))
 			task.wait(3)
 			ProfilePicture.Image = (getcustomasset and getcustomasset("profilepictures/1.png") or "https://www.roblox.com/headshot-thumbnail/image?userId=".. lp.UserId .."&width=420&height=420&format=png")
 		end
