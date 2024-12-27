@@ -1,3 +1,5 @@
+-- ignore var names i was hella bored making this
+-- please stop sending "``````````" in the feeedback
 -- source code fixed ok 👍
 
 game.StarterGui:SetCore("SendNotification", {
