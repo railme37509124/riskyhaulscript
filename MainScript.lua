@@ -1,5 +1,15 @@
--- this script IS getting a new update, i will change the ui, fix some things and some features, most of the code will be rewritten. just watiing for swift to udptate
+-- this script IS getting a new update, i will change the ui, fix some things and some features, most of the code will be rewritten. just watiing for swift to udptate (This script WILL remain open source)
 
+--[[
+	If you want to view the feedback for some reason: https://discord.gg/wAamT8wdQH
+	TODO:
+		Better Farming
+		Auto Builder
+		Mod Detection
+		Infinite Money fr (need a vulnverability for this)
+		Auto Quests
+		Bug Fixes
+]]
 
 -- fuck da risky haul devs 🔥
 --[[
