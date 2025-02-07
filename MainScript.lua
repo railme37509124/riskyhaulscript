@@ -1,9 +1,10 @@
--- OWNER ALT ACC: Altered (user is "krampus.gg")
-
--- NOTES:
--- ignore the names i was just rly bored and i intended this to be obfuscated
--- a discord will not be created until i have fully finished komaru hub
--- stop seeing retarded feedback like "999" "super mrnu" "idkd" "100000"
+-- fuck da risky haul devs 🔥
+--[[
+	NOTES:
+	a discord will not be created until i have fully finished komaru hub.
+ 	OWNER ALT ACC: Altered (user is "krampus.gg")
+	MAIN ACCOUNT: apnff0x (cute cat)
+]]
 
 game.StarterGui:SetCore("SendNotification", {
  Title = "ps",Text="ps: Risky haul is updating alot and the script might become broken, if it does pls use the feedback section and attach a video",
