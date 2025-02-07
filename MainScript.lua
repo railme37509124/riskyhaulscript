@@ -1341,13 +1341,16 @@ end}) -- go win
 Stuff:Toggle({Name = "Fix \"goto sell point\" if it glitches out", Callback = function(state)
 	skibidi1 = state
 end})
+Stuff:Toggle({Name = "autosell when reach a thing", Callback = function(state)
+	skibidi2 = state
+end})
 Stuff:Divider("Discord")
 Stuff:Button({Name = "Copy developer UserID (discord)", Callback = function() setclipboard("1215375161121833063") end})
 Stuff:Button({Name = "Copy official risky haul discord", Callback = function() setclipboard("https://discord.gg/risky-haul-1264916236236619857") end})
 
 local iwannabuythis = nil
 local iwannabuythis2 = nil
-local howfuckingmany = 1
+local count = 1
 local pwices = {
 	["Functional"] = {
 		["Grass"] = 250,
@@ -1360,7 +1363,7 @@ local pwices = {
 		["Tundra"] = 1350
 	}
 }
-local function BuyAFuckingCrate(crate, biome)
+local function buyCrate(crate, biome)
 	game:GetService("ReplicatedStorage").RemoteEvents.ChestEvents.PurchaseChest:FireServer(crate .. " Chest", biome .. " Biome")
 end
 
@@ -1372,18 +1375,18 @@ Crates:Dropdown({Name = "Biome", List = {"Grass", "Cave", "Tundra"}, Callback = 
 	iwannabuythis2 = v
 end})
 Crates:Slider({Name = "Amount", Callback = function(v)
-	howfuckingmany = v
+	count = v
 end, min = 1, max = 1000})
 Crates:Button({Name = "Buy Crates", Callback = function()
 	if not iwannabuythis then yznotify("Please choose a chest type") return end
 	if not iwannabuythis2 then yznotify("Please choose a biome") return end
-	local meth = (pwices[iwannabuythis][iwannabuythis2])*howfuckingmany
-	if game:GetService("Players").LocalPlayer.leaderstats["Stud Bucks"].Value < meth then
-		yznotify("You do not have enough stud bucks for this! You need ~	" .. tostring(math.round(meth)) .. " more stud bucks")
+	local pmath = (pwices[iwannabuythis][iwannabuythis2])*count
+	if game:GetService("Players").LocalPlayer.leaderstats["Stud Bucks"].Value < pmath then
+		yznotify("You do not have enough stud bucks for this! You need ~" .. tostring(math.round(pmath)) .. " more stud bucks")
 		return
 	end
-	for i = 1, howfuckingmany do
-		BuyAFuckingCrate(iwannabuythis, iwannabuythis2)
+	for i = 1, count do
+		buyCrate(iwannabuythis, iwannabuythis2)
 	end
 	yznotify("Crates were bought")
 end})
@@ -1391,8 +1394,8 @@ Crates:Divider("Help")
 Crates:Button({Name = "Estimate Cost", Callback = function()
 	if not iwannabuythis then yznotify("Please choose a chest type") return end
 	if not iwannabuythis2 then yznotify("Please choose a biome") return end
-	local meth = (pwices[iwannabuythis][iwannabuythis2])*howfuckingmany
-	yznotify("It costs ~" .. tostring(math.round(meth)) .. " stud bucks to buy "..howfuckingmany.." chests")
+	local pmath = (pwices[iwannabuythis][iwannabuythis2])*count
+	yznotify("It costs ~" .. tostring(math.round(pmath)) .. " stud bucks to buy "..count.." chests")
 end})
 
 local thetheme = nil
