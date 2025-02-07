@@ -2,6 +2,7 @@
 
 --[[
 	If you want to view the feedback for some reason: https://discord.gg/wAamT8wdQH
+	Community Server: https://discord.gg/hFCsjYRVJ4
 	TODO:
 		Better Farming
 		Auto Builder
@@ -14,7 +15,6 @@
 -- fuck da risky haul devs 🔥
 --[[
 	NOTES:
-	a discord will not be created until i have fully finished komaru hub.
  	OWNER ALT ACC: Altered (user is "krampus.gg")
 	MAIN ACCOUNT: apnff0x (cute cat)
 ]]
@@ -147,6 +147,7 @@ Stuff:Toggle({Name = "autosell when reach a thing", Callback = function(state)
 end})
 Stuff:Divider("Discord")
 Stuff:Button({Name = "Copy developer UserID (discord)", Callback = function() setclipboard("1215375161121833063") end})
+Stuff:Button({Name = "Copy Discord", Callback = function() setclipboard("https://discord.gg/hFCsjYRVJ4") end})
 Stuff:Button({Name = "Copy official risky haul discord", Callback = function() setclipboard("https://discord.gg/risky-haul-1264916236236619857") end})
 
 local iwannabuythis = nil
