@@ -1,3 +1,6 @@
+-- this script IS getting a new update, i will change the ui, fix some things and some features, most of the code will be rewritten. just watiing for swift to udptate
+
+
 -- fuck da risky haul devs 🔥
 --[[
 	NOTES:
