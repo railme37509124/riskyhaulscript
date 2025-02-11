@@ -1208,7 +1208,4 @@ function gdata:Window(options)
 
 	return window_data
 end
-
-if not studio then -- // Init
-	return gdata
-end
+return gdata
