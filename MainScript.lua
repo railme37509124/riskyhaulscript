@@ -38,7 +38,7 @@ local function yznotify(text)
 	starter:SetCore("SendNotification", {Text = text, Title = "YZenium", Duration = 5})
 end
 yznotify("Loading Library")
-local gdata = loadstring(game:HttpGet('https://raw.githubusercontent.com/railme37509124/riskyhaulscript/8afbf7e16af558fb37a3fecba8e888a43ace2be5/somestuff/ui'))()
+local gdata = loadstring(game:HttpGet('https://raw.githubusercontent.com/railme37509124/riskyhaulscript/refs/heads/main/somestuff/ui'))()
 
 MainWindow = gdata:Window({
 	GameName = "Risky Haul",
